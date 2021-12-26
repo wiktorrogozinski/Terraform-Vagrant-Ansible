@@ -8,26 +8,31 @@ Vagrant.configure("2") do |config|
     end
     web.vm.box = "ubuntu/xenial64"
     web.vm.network "private_network", ip: "192.168.56.11"
+    web.vm.network "private_network", :type => 'dhcp', :name => 'vboxnet0', :adapter => 2
     end
 
     config.vm.define "exp2" do |veb|
     veb.vm.box = "ubuntu/xenial64"
     veb.vm.network "private_network", ip: "192.168.56.12"
+    veb.vm.network "private_network", :type => 'dhcp', :name => 'vboxnet0', :adapter => 2
 
   end
 
   config.vm.define "exp3" do |seb|
   seb.vm.box = "ubuntu/xenial64"
   seb.vm.network "private_network", ip: "192.168.56.13"
+  seb.vm.network "private_network", :type => 'dhcp', :name => 'vboxnet0', :adapter => 2
   end
 
   config.vm.define "exp4" do |heb|
     heb.vm.box = "ubuntu/xenial64"
     heb.vm.network "private_network", ip: "192.168.56.14"
+    heb.vm.network "private_network", :type => 'dhcp', :name => 'vboxnet0', :adapter => 2
     end
 
     config.vm.define "exp5" do |deb|
       deb.vm.box = "ubuntu/xenial64"
       deb.vm.network "private_network", ip: "192.168.56.15"
+      deb.vm.network "private_network", :type => 'dhcp', :name => 'vboxnet0', :adapter => 2
       end
 end
