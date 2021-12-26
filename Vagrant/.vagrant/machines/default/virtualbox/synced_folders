@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/wiktor/task3FIles/VagrantSupervisor","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/wiktor/Terraform-Vagrant-Ansible/Vagrant","disabled":false,"__vagrantfile":true}}}
