@@ -1,26 +1,33 @@
-#paste the given below content in Vagrantfile
 Vagrant.configure("2") do |config|
   #config.vm.box = "base"
 
-  config.vm.define "web" do |web|
+  config.vm.define "exp1" do |web|
     web.vm.provider "virtualbox" do |vb_web|
       vb_web.memory = 1024
       vb_web.cpus = 2
     end
-
     web.vm.box = "ubuntu/xenial64"
     web.vm.network "private_network", ip: "192.168.56.11"
+    end
+
+    config.vm.define "exp2" do |veb|
+    veb.vm.box = "ubuntu/xenial64"
+    veb.vm.network "private_network", ip: "192.168.56.12"
 
   end
 
-  config.vm.define "exp2" do |aeb|
-    aeb.vm.box = "ubuntu/xenial64"
-    aeb.vm.network "private_network", ip: "192.168.56.12"
-
+  config.vm.define "exp3" do |seb|
+  seb.vm.box = "ubuntu/xenial64"
+  seb.vm.network "private_network", ip: "192.168.56.13"
   end
 
-  config.vm.define "exp3" do |beb|
-    beb.vm.box = "ubuntu/xenial64"
-    beb.vm.network "private_network", ip: "192.168.56.13"
-  end
+  config.vm.define "exp4" do |heb|
+    heb.vm.box = "ubuntu/xenial64"
+    heb.vm.network "private_network", ip: "192.168.56.14"
+    end
+
+    config.vm.define "exp5" do |deb|
+      deb.vm.box = "ubuntu/xenial64"
+      deb.vm.network "private_network", ip: "192.168.56.15"
+      end
 end
