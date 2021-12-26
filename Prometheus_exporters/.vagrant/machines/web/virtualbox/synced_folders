@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters","disabled":false,"__vagrantfile":true}}}
