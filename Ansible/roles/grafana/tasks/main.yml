@@ -1,4 +1,4 @@
----
+--- 
 - name: install gpg
   apt:
     name: gnupg,software-properties-common
@@ -34,7 +34,6 @@
   retries: 120
   delay: 1
 - name: change admin password for grafana gui
-  shell : "grafana-cli admin reset-admin-password {{ grafana_admin_password }}"
+  shell : "grafana-cli admin reset-admin-password {{'admin123%'}}"
   register: __command_admin
   changed_when: __command_admin.rc !=0
-# tasks file for roles/grafana
