@@ -2,29 +2,33 @@ all:
   children:
     monitor:
       hosts:
-        [glowa]
-        192.168.56.16  
-        ansible_user: vagrant 
-        ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp6/virtualbox/private_key
-            
-    others:
+        monitor-server:    
+          ansible_host: 192.168.56.11  
+          ansible_user: vagrant   
+          ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp1/virtualbox/private_key 
+    exporters:
       hosts:
-        192.168.56.11
-        ansible_user: vagrant 
-        ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp1/virtualbox/private_key
-        
-        192.168.56.12
-        ansible_user: vagrant 
-        ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp2/virtualbox/private_key
-        
-        192.168.56.13
-        ansible_user: vagrant
-        ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp3/virtualbox/private_key
-        
-        192.168.56.14
-        ansible_user: vagrant 
-        ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp4/virtualbox/private_key
-        
-        192.168.56.15
-        ansible_user: vagrant 
-        ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp5/virtualbox/private_key
+        exporter1-host:    
+          ansible_host: 192.168.56.11  
+          ansible_user: vagrant   
+          ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp1/virtualbox/private_key 
+        exporter2-host:    
+          ansible_host: 192.168.56.12  
+          ansible_user: vagrant   
+          ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp2/virtualbox/private_key
+        exporter3-host:    
+          ansible_host: 192.168.56.13  
+          ansible_user: vagrant   
+          ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp3/virtualbox/private_key
+        exporter4-host:    
+          ansible_host: 192.168.56.14  
+          ansible_user: vagrant   
+          ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp4/virtualbox/private_key
+        exporter5-host:    
+          ansible_host: 192.168.56.15 
+          ansible_user: vagrant   
+          ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp5/virtualbox/private_key
+        exporter6-host:    
+          ansible_host: 192.168.56.16  
+          ansible_user: vagrant   
+          ansible_ssh_private_key_file: /home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp6/virtualbox/private_key         

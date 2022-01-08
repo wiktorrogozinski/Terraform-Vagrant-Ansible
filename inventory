@@ -1,3 +1,0 @@
-
-server1 ansible_host=192.168.56.11 ansible_user=vagrant ansible_ssh_private_key_file=/home/wiktor/Terraform-Vagrant-Ansible/Prometheus_exporters/.vagrant/machines/exp1/virtualbox/private_key
-
