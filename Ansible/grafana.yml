@@ -1,0 +1,23 @@
+- hosts: monitor
+  become: True
+  become_user: root
+  vars: 
+    grafana_version: 8.3.3
+    arch: amd64
+    grafana_filename: grafana-enterprise_{{ grafana_version }}_{{ arch }}.deb
+
+  tasks:
+  - name: Download grafana deb file
+    get_url:
+      url: https://dl.grafana.com/enterprise/release/grafana-enterprise_8.3.3_amd64.deb
+      dest: /tmp/{{grafana_filename}}
+  - name: Install grafana
+    apt: deb="/tmp/{{ grafana_filename }}" state=present
+  - name: configure systemd to use service
+    systemd:
+      daemon_reload: yes
+      enabled: yes
+      state: started
+      name: grafana-server.service
+
+
